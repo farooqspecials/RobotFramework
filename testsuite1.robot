@@ -19,3 +19,4 @@ Test2
     Input Password    css:#form > div > div > div.col-sm-4.col-sm-offset-1 > div > form > input[type=password]:nth-child(3)    ${CREDENTIALS}[1]
     Click Button    css:#form > div > div > div.col-sm-4.col-sm-offset-1 > div > form > button
     Close Browser
+    Log To Console    %{username} login to %{os}
