@@ -15,7 +15,7 @@ test1
 Test2
     [Tags]    Test2
     Open Browser    ${url}
-    Input Text    css:#form > div > div > div.col-sm-4.col-sm-offset-1 > div > form > input[type=email]:nth-child(2)    ${LOGIN}{username}
-    Input Password    css:#form > div > div > div.col-sm-4.col-sm-offset-1 > div > form > input[type=password]:nth-child(3)    ${LOGIN}[password]
+    Input Text    css:#form > div > div > div.col-sm-4.col-sm-offset-1 > div > form > input[type=email]:nth-child(2)    ${CREDENTIALS}[0]
+    Input Password    css:#form > div > div > div.col-sm-4.col-sm-offset-1 > div > form > input[type=password]:nth-child(3)    ${CREDENTIALS}[1]
     Click Button    css:#form > div > div > div.col-sm-4.col-sm-offset-1 > div > form > button
     Close Browser
