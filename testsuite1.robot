@@ -20,3 +20,15 @@ Test2
     Click Button    css:#form > div > div > div.col-sm-4.col-sm-offset-1 > div > form > button
     Close Browser
     Log To Console    %{username} login to %{os}
+
+Test3
+    [Tags]    Test3
+    Open Browser    ${url}
+    Login
+    Close Browser
+
+*** Keywords ***
+Login
+    Input Text    css:#form > div > div > div.col-sm-4.col-sm-offset-1 > div > form > input[type=email]:nth-child(2)    farooqspecials@gmail.com
+    Input Password    css:#form > div > div > div.col-sm-4.col-sm-offset-1 > div > form > input[type=password]:nth-child(3)    farooq007
+    Click Button    css:#form > div > div > div.col-sm-4.col-sm-offset-1 > div > form > button
