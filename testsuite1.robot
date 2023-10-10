@@ -1,6 +1,6 @@
 *** Settings ***
-Suite Setup       Log To Console    Test Suite Started
-Suite Teardown    Log To Console    Test Suite Ended
+Suite Setup       GotoHomePage
+Suite Teardown    Close All Browsers
 Library           SeleniumLibrary
 
 *** Variables ***
@@ -26,9 +26,7 @@ Test2
 Test3
     [Tags]    Test3
     [Setup]    Log To Console    Test Case 3 Started
-    Open Browser    ${url}
     Login
-    Close Browser
     [Teardown]    Log To Console    Test Case 3 Ended
 
 *** Keywords ***
@@ -36,3 +34,7 @@ Login
     Input Text    css:#form > div > div > div.col-sm-4.col-sm-offset-1 > div > form > input[type=email]:nth-child(2)    farooqspecials@gmail.com
     Input Password    css:#form > div > div > div.col-sm-4.col-sm-offset-1 > div > form > input[type=password]:nth-child(3)    farooq007
     Click Button    css:#form > div > div > div.col-sm-4.col-sm-offset-1 > div > form > button
+
+GotoHomePage
+    Open Browser    ${url}
+
