@@ -1,4 +1,6 @@
 *** Settings ***
+Suite Setup       Log To Console    Test Suite Started
+Suite Teardown    Log To Console    Test Suite Ended
 Library           SeleniumLibrary
 
 *** Variables ***
@@ -23,9 +25,11 @@ Test2
 
 Test3
     [Tags]    Test3
+    [Setup]    Log To Console    Test Case 3 Started
     Open Browser    ${url}
     Login
     Close Browser
+    [Teardown]    Log To Console    Test Case 3 Ended
 
 *** Keywords ***
 Login
